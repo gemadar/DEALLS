@@ -8,12 +8,19 @@ This dating apps built using Go with Echo framework and Mongo DB consisting thes
 5. Like
 6. Pass 
 
-HOW TO RUN ON LOCAL (without doocker)
+HOW TO RUN ON LOCAL (without docker)
   1. Pull the repository
   2. Rename .env.example to .env
   3. insert your Mongo URI and JWT_SECRET (up to your choice)
   4. hit "go get" in terminal
-  5. hit "go run main.go" in terminal 
+  5. hit "go run main.go" in terminal
+
+HOW TO RUN ON DOCKER
+  1. Pull the repository
+  2. Rename .env.example to .env
+  3. insert your Mongo URI, JWT_SECRET (up to your choice), ClearView to decide how long non premium user can reset their ten per day limit
+  4. edit YOUR MONGO URI in docker-compose.yml
+  5. hit "docker compose up" in terminal 
 
 
 You can sign up by providing some data about yourself (beware of existing username, yours should be unique). After successful signup, hit the sign in API using your username and password.
