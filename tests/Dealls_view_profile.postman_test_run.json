@@ -1,0 +1,62 @@
+{
+	"id": "7ee22a3c-125c-4712-bafc-46f574bcc4f7",
+	"name": "Dealls",
+	"timestamp": "2024-06-05T07:52:37.217Z",
+	"collection_id": "16564727-2e492eda-b4ed-497b-b017-719bafe5518e",
+	"folder_id": 0,
+	"environment_id": "16564727-731f6867-5d39-476a-886e-53ea5ff97a43",
+	"totalPass": 0,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2024-06-05T07:52:33.603Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "e33e973d-40a2-444a-be38-1438b2fc6e4c",
+			"name": "Scroll",
+			"url": "http://localhost:6161/users/scroll",
+			"time": 101,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				1155,
+				596,
+				117,
+				109,
+				114,
+				100,
+				110,
+				148,
+				110,
+				101
+			],
+			"allTests": [
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{}
+			]
+		}
+	],
+	"count": 10,
+	"totalTime": 2660,
+	"collection": {
+		"requests": [
+			{
+				"id": "e33e973d-40a2-444a-be38-1438b2fc6e4c",
+				"method": "GET"
+			}
+		]
+	}
+}

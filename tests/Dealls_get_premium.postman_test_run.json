@@ -1,0 +1,44 @@
+{
+	"id": "ee085e72-c81f-4ad2-b2ab-798f53ca3719",
+	"name": "Dealls",
+	"timestamp": "2024-06-05T07:55:00.433Z",
+	"collection_id": "16564727-2e492eda-b4ed-497b-b017-719bafe5518e",
+	"folder_id": 0,
+	"environment_id": "16564727-731f6867-5d39-476a-886e-53ea5ff97a43",
+	"totalPass": 0,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2024-06-05T07:54:59.935Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "7292f8ff-ab68-48d8-b21a-fd62c24c4761",
+			"name": "Get Premium",
+			"url": "http://localhost:6161/users/getpremium",
+			"time": 80,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				80
+			],
+			"allTests": [
+				{}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 80,
+	"collection": {
+		"requests": [
+			{
+				"id": "7292f8ff-ab68-48d8-b21a-fd62c24c4761",
+				"method": "GET"
+			}
+		]
+	}
+}

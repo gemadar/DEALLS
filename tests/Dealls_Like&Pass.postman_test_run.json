@@ -1,0 +1,114 @@
+{
+	"id": "45958a48-ad88-41ed-b392-88ac39ea3795",
+	"name": "Dealls",
+	"timestamp": "2024-06-05T08:01:24.197Z",
+	"collection_id": "16564727-2e492eda-b4ed-497b-b017-719bafe5518e",
+	"folder_id": 0,
+	"environment_id": "16564727-731f6867-5d39-476a-886e-53ea5ff97a43",
+	"totalPass": 0,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2024-06-05T08:01:20.282Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "adb2831b-8c6f-4ec4-a7f9-c2e4edb3e5b9",
+			"name": "Like",
+			"url": "http://localhost:6161/users/like",
+			"time": 61,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				87,
+				69,
+				62,
+				75,
+				68,
+				89,
+				55,
+				58,
+				116,
+				53,
+				68,
+				69,
+				61
+			],
+			"allTests": [
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{}
+			]
+		},
+		{
+			"id": "9bd09185-23ee-4bef-b950-82fe08fbe868",
+			"name": "Pass",
+			"url": "http://localhost:6161/users/pass",
+			"time": 61,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				66,
+				71,
+				88,
+				58,
+				67,
+				50,
+				73,
+				66,
+				52,
+				68,
+				71,
+				74,
+				61
+			],
+			"allTests": [
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{}
+			]
+		}
+	],
+	"count": 13,
+	"totalTime": 1795,
+	"collection": {
+		"requests": [
+			{
+				"id": "adb2831b-8c6f-4ec4-a7f9-c2e4edb3e5b9",
+				"method": "GET"
+			},
+			{
+				"id": "9bd09185-23ee-4bef-b950-82fe08fbe868",
+				"method": "GET"
+			}
+		]
+	}
+}

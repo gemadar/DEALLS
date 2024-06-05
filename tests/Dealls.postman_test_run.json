@@ -1,0 +1,118 @@
+{
+	"id": "f79b0747-9b0b-4be4-b388-26c4aef8a006",
+	"name": "Dealls",
+	"timestamp": "2024-06-05T07:46:27.821Z",
+	"collection_id": "16564727-2e492eda-b4ed-497b-b017-719bafe5518e",
+	"folder_id": 0,
+	"environment_id": "16564727-731f6867-5d39-476a-886e-53ea5ff97a43",
+	"totalPass": 0,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2024-06-05T07:45:29.784Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "3113673d-6cb6-4f44-9a9c-b5ea4c001df8",
+			"name": "Sign Up",
+			"url": "http://localhost:6161/signup",
+			"time": 2371,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				2129,
+				2288,
+				2978,
+				2133,
+				2486,
+				2017,
+				1786,
+				1682,
+				2032,
+				2093,
+				1972,
+				2319,
+				1744,
+				2371
+			],
+			"allTests": [
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{}
+			]
+		},
+		{
+			"id": "a5d6fdc6-3a14-4a87-a45b-a1b560461710",
+			"name": "Sign In",
+			"url": "http://localhost:6161/signin",
+			"time": 2192,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				2603,
+				1898,
+				1601,
+				1801,
+				1634,
+				1780,
+				1691,
+				1727,
+				2061,
+				1924,
+				1702,
+				1504,
+				1577,
+				2192
+			],
+			"allTests": [
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{},
+				{}
+			]
+		}
+	],
+	"count": 14,
+	"totalTime": 55725,
+	"collection": {
+		"requests": [
+			{
+				"id": "3113673d-6cb6-4f44-9a9c-b5ea4c001df8",
+				"method": "POST"
+			},
+			{
+				"id": "a5d6fdc6-3a14-4a87-a45b-a1b560461710",
+				"method": "POST"
+			}
+		]
+	}
+}
