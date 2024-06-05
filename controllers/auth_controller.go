@@ -7,6 +7,7 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"strings"
 	"time"
 
 	"github.com/go-playground/validator/v10"
@@ -76,9 +77,8 @@ func SignUp(c echo.Context) error {
 		},
 	}
 	_, err := userCollection.Indexes().CreateMany(context.Background(), indexes)
-	println("a")
 	if err != nil {
-		return c.JSON(http.StatusBadRequest, responses.MessageResponse{Status: http.StatusBadRequest, Message: "error", Data: "Username already exist!"})
+		return c.JSON(http.StatusBadRequest, responses.MessageResponse{Status: http.StatusBadRequest, Message: "error", Data: err.Error()})
 	}
 
 	// Hash password
@@ -99,6 +99,11 @@ func SignUp(c echo.Context) error {
 	// Insert new user
 	_, errs := userCollection.InsertOne(ctx, newUser)
 	if errs != nil {
+
+		if strings.Contains(errs.Error(), "duplicate key") {
+			return c.JSON(http.StatusBadRequest, responses.MessageResponse{Status: http.StatusBadRequest, Message: "error", Data: "Username already exist!"})
+		}
+
 		return c.JSON(http.StatusBadRequest, responses.MessageResponse{Status: http.StatusBadRequest, Message: "error", Data: errs.Error()})
 	}
 
@@ -134,4 +139,31 @@ func SignIn(c echo.Context) error {
 	token := tokenGen(data)
 
 	return c.JSON(http.StatusOK, responses.MessageResponse{Status: http.StatusOK, Message: "success", Data: token})
+}
+
+func ClearView() {
+	ctx, cancel := context.WithTimeout(context.Background(), 10*time.Second)
+
+	defer cancel()
+
+	update := bson.M{"viewed": 0}
+	filter := bson.M{"viewed": bson.M{"$ne": 0}}
+
+	userCollection.UpdateMany(ctx, filter, bson.M{"$set": update})
+}
+
+func Schedule(what func(), delay time.Duration) chan bool {
+	stop := make(chan bool)
+
+	go func() {
+		for {
+			what()
+			select {
+			case <-time.After(delay):
+			case <-stop:
+				return
+			}
+		}
+	}()
+	return stop
 }

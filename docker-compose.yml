@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  mongo:
+    image: mongo:latest
+    container_name: my-mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+
+  goapp:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    container_name: my-goapp
+    ports:
+      - "6161:6161"
+    depends_on:
+      - mongo
+    environment:
+      MONGODB_URI: "YOUR MONGO URI"
+
+volumes:
+  mongo-data:
